@@ -16,7 +16,7 @@ public class BookStore {
         this.books.add(book);
     }
 
-    public List<Book> search(Book toSearch) {
+    public List<Book> search(BookSearchSpec toSearch) {
         List<Book> results = new ArrayList<>();
         for (Book book : books) {
             if (isNotCaseInsensitiveEquals(toSearch.getAuthor(), book.getAuthor())) {
@@ -45,4 +45,4 @@ public class BookStore {
         return s1 != null
                 && !Objects.equals(s2.toLowerCase(),s1.toLowerCase());
     }
-}
+ }
